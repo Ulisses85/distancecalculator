@@ -1,0 +1,49 @@
+<!DOCTYPE>
+<html>
+<head>
+    <title>TASK GOOGLE API</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyAIypHj2JPw6lMas7dpSRRZUwZ07RPHFmM&callback"></script>
+    <script src = "main.js"></script>
+</head>
+<body>
+  <div class="jumbotron">
+  <h1>Distance calculator</h1>
+  <p>Fill in origin and destination field, select travel mode then click on submitt to see duration, distance and route between two points.</p>
+</div>
+   <form class="form-inline">
+     <div class="form-group">
+         <label for="origin">Origin</label>
+          <input type="text" class="form-control" id="txtOrigin" placeholder="Start Point">
+        </div>
+  <div class="form-group">
+    <label for="Destination">Destination:</label>
+    <input type="text" class="form-control" id="txtDestination" placeholder="End Point" />
+  </div>
+  <div class="form-group">
+	  <label for="mode">Select list:</label>
+		  <select class="form-control" id="mode" style="width: 200px">
+
+        <option>TRANSIT</option>
+		    <option>DRIVING</option>
+		    <option>BICYCLING</option>
+		    <option>WALKING</option>
+
+      </select>
+	</div>
+    <div class="form-group">
+      <button type="button" value="Get Route" onclick="GetRoute()" class="btn btn-primary" >Submitt</button>
+  </div>
+      <div class="jumbotron" id="dist"></div>
+        <div class="container">
+          <div class="outerClass2 col-xs-6">
+        <div id="map" style="width: 400px; height: 400px"></div>
+          </div>
+          <div class="outerClass2 col-xs-6">
+        <div id="dvPanel" div class="outerClass2 col-xs-6" style="width: 400px; height: 400px"></div>
+      </div>
+</body>
+</html>
